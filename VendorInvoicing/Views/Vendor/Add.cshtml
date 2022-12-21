@@ -1,0 +1,28 @@
+﻿@*Add.cshtml
+ Assignment 3
+ Revision History
+       Xiangdong Li, 2022.12.1: Created
+       Xiangdong Li, 2022.12.1: Debugging complete
+       Xiangdong Li, 2020.12.1: Comments added*@
+
+@model Vendor
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+@{
+    ViewData["Title"] = "Add a new vendor";
+}
+
+<form asp-controller="Vendor" asp-action="AddNewVendor" method="post" enctype="application/x-www-form-urlencoded">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <partial name="_VendorAddEditLinks" />
+
+    <div>
+        <button type="submit" class="btn btn-primary">Add</button>
+        <a asp-controller="Vendor" asp-action="GetVendorsByGroup" class="btn btn-primary">Cancel</a>
+    </div>
+</form>
+

@@ -1,0 +1,38 @@
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\obj\Debug\net6.0\Vendors.csproj.AssemblyReference.cache
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\obj\Debug\net6.0\Vendors.GeneratedMSBuildEditorConfig.editorconfig
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\obj\Debug\net6.0\Vendors.AssemblyInfoInputs.cache
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\obj\Debug\net6.0\Vendors.AssemblyInfo.cs
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\obj\Debug\net6.0\Vendors.csproj.CoreCompileInputs.cache
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\bin\Debug\net6.0\Vendors.deps.json
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\bin\Debug\net6.0\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\bin\Debug\net6.0\Vendors.pdb
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\obj\Debug\net6.0\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\obj\Debug\net6.0\refint\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\obj\Debug\net6.0\Vendors.pdb
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing\Vendors\obj\Debug\net6.0\ref\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\bin\Debug\net6.0\Vendors.deps.json
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\bin\Debug\net6.0\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\bin\Debug\net6.0\Vendors.pdb
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\obj\Debug\net6.0\Vendors.csproj.AssemblyReference.cache
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\obj\Debug\net6.0\Vendors.GeneratedMSBuildEditorConfig.editorconfig
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\obj\Debug\net6.0\Vendors.AssemblyInfoInputs.cache
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\obj\Debug\net6.0\Vendors.AssemblyInfo.cs
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\obj\Debug\net6.0\Vendors.csproj.CoreCompileInputs.cache
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\obj\Debug\net6.0\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\obj\Debug\net6.0\refint\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\obj\Debug\net6.0\Vendors.pdb
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\obj\Debug\net6.0\ref\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\bin\Debug\net6.0\Vendors.deps.json
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\bin\Debug\net6.0\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\bin\Debug\net6.0\Vendors.pdb
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\obj\Debug\net6.0\Vendors.csproj.AssemblyReference.cache
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\obj\Debug\net6.0\Vendors.GeneratedMSBuildEditorConfig.editorconfig
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\obj\Debug\net6.0\Vendors.AssemblyInfoInputs.cache
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\obj\Debug\net6.0\Vendors.AssemblyInfo.cs
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\obj\Debug\net6.0\Vendors.csproj.CoreCompileInputs.cache
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\obj\Debug\net6.0\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\obj\Debug\net6.0\refint\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\obj\Debug\net6.0\Vendors.pdb
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi - Copy\Vendors\obj\Debug\net6.0\ref\Vendors.dll
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\bin\Debug\net6.0\Entities\appsettings.Development.json
+C:\Documents\Documents\Conestoga\2A\PROG2230\assignment\assignmrnt3\VendorInvoicing_A3_XiangdongLi\Vendors\bin\Debug\net6.0\Entities\appsettings.json

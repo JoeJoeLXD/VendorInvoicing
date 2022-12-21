@@ -1,0 +1,235 @@
+﻿@*Item.cshtml
+ Assignment 3
+ Revision History
+       Xiangdong Li, 2022.12.06: Created
+       Xiangdong Li, 2022.12.06: Debugging complete
+       Xiangdong Li, 2020.12.06: Comments added*@
+
+@model VendorInvoicesViewModel
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script type="text/javascript">
+        $('#employee1').on('click', 'tbody tr', function () {
+            $(this).addClass('highlight').siblings().removeClass('highlight');
+        });
+    </script>
+}
+
+@{
+    ViewData["Title"] = "Manage your vendor";
+
+}
+
+<br />
+
+<div class="row">
+    <div class="col-sm-6">
+        <h5>Invoices for @Model.ActiveVendor.Name</h5><br />
+
+        <h6>Address: @Model.ActiveVendor.Address1 @Model.ActiveVendor.City</h6><br />
+
+        <h6>Invoices</h6>
+
+        @if (Model.ActiveVendor.Invoices.Count() == 0)
+        {
+            <p>No invoices yet - you could create one!</p>
+        }
+        else
+        {
+            <table class="table table-bordered table-striped" id="employee1">
+                <thead>
+                    <tr>
+                        <th>Invoice #</th>
+                        <th>Due date</th>
+                        <th>Amount paid</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var invoice in Model.ActiveVendor.Invoices)
+                    {
+                        <tr>
+                            <td>
+                                <a asp-controller="Vendor" asp-action="GetLineItemByVendorAndInvoiceId"
+                           asp-route-id="@Model.ActiveVendor.VendorId"
+                           asp-route-invoiceId="@invoice.InvoiceId">@invoice.InvoiceId</a>
+                            </td>
+                            <td>@invoice.InvoiceDueDate?.ToString("d")</td>
+                            <td>@invoice.PaymentTotal?.ToString("C")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+        <form asp-controller="Vendor"
+              asp-action="AddInvoiceToVendorById" asp-route-id="@Model.ActiveVendor.VendorId"
+              method="post" enctype="application/x-www-form-urlencoded">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group row">
+                <div class="col-sm-1">
+                    <label>Date:</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="datetime" class="form-control" asp-for="NewInvoice.InvoiceDate" value="@Model.NewInvoice?.InvoiceDate?.ToString("d")" /><br />
+                </div>
+                <div class="col-sm-7">
+                    <span asp-validation-for="NewInvoice.InvoiceDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-1">
+                    <label>Terms:</label>
+                </div>
+
+                <div class="col-sm-4">
+                    <!-- add a drop-down for payment terms options: -->
+                    @if (Model.AllPaymentTerms != null)
+                    {
+                        <select asp-for="NewInvoice.PaymentTermsId" class="form-control">
+                            <option value="">Select a payment terms</option>
+                            @foreach (var p in Model.AllPaymentTerms)
+                            {
+                                <option value="@p.PaymentTermsId">@p.Description</option> 
+                            }
+                        </select>
+                    }
+                </div>
+
+                <div class="col-sm-7">
+                    <span asp-validation-for="NewInvoice.PaymentTermsId" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div>
+                <button type="submit" class="btn btn-primary">Add invoice</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-5">
+
+        @if (@Model.ActiveVendor.Name[0].ToString() == "A" || @Model.ActiveVendor.Name[0].ToString() == "B"
+        || @Model.ActiveVendor.Name[0].ToString() == "C" || Model.ActiveVendor.Name[0].ToString() == "D"
+        || Model.ActiveVendor.Name[0].ToString() == "E")
+        {
+            <h5>
+                <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="A" asp-route-upperBound="E">Return to A - E Vendors</a>
+            </h5>
+
+            <br />
+        }
+
+        @if (@Model.ActiveVendor.Name[0].ToString() == "F" || @Model.ActiveVendor.Name[0].ToString() == "G"
+        || @Model.ActiveVendor.Name[0].ToString() == "H" || Model.ActiveVendor.Name[0].ToString() == "I"
+        || Model.ActiveVendor.Name[0].ToString() == "J" || @Model.ActiveVendor.Name[0].ToString() == "K")
+        {
+            <h5>
+                <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="F" asp-route-upperBound="K">Return to F - K Vendors</a>
+            </h5>
+
+            <br />
+
+        }
+
+        @if (@Model.ActiveVendor.Name[0].ToString() == "L" || @Model.ActiveVendor.Name[0].ToString() == "M"
+        || @Model.ActiveVendor.Name[0].ToString() == "N" || Model.ActiveVendor.Name[0].ToString() == "O"
+        || Model.ActiveVendor.Name[0].ToString() == "P" || @Model.ActiveVendor.Name[0].ToString() == "Q"
+        || @Model.ActiveVendor.Name[0].ToString() == "R")
+        {
+            <h5>
+                <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="L" asp-route-upperBound="R">Return to L - R Vendors</a>
+            </h5>
+
+            <br />
+        }
+
+        @if (@Model.ActiveVendor.Name[0].ToString() == "S" || @Model.ActiveVendor.Name[0].ToString() == "T"
+        || @Model.ActiveVendor.Name[0].ToString() == "U" || Model.ActiveVendor.Name[0].ToString() == "V"
+        || Model.ActiveVendor.Name[0].ToString() == "W" || @Model.ActiveVendor.Name[0].ToString() == "X"
+        || @Model.ActiveVendor.Name[0].ToString() == "Y" || @Model.ActiveVendor.Name[0].ToString() == "Z")
+        {
+            <h5>
+                <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="S" asp-route-upperBound="Z">Return to S - Z vendors</a>
+            </h5>
+
+            <br />
+        }
+
+        @if (Model.ActiveInvoice != null)
+        {
+            <h6>Terms: @Model.ActiveInvoice.PaymentTerms.Description</h6>
+
+            <br />
+
+            <h6>Line items for Invoice #@Model.ActiveInvoice.InvoiceId</h6>
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var invocelineitems in Model.ActiveInvoice.InvoiceLineItems)
+                    {
+                        <tr>
+                            <td>@invocelineitems.Description</td>
+                            <td>@invocelineitems.Amount?.ToString("C")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <p>Total: @Model.ActiveInvoice.PaymentTotal?.ToString("C")</p>
+
+            <form asp-controller="Vendor"
+              asp-action="AddInvocelineitemToInvoiceById" asp-route-id="@Model.ActiveVendor.VendorId"
+              asp-route-invoiceId="@Model.ActiveInvoice.InvoiceId"
+              method="post" enctype="application/x-www-form-urlencoded">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label>Description:</label>
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" asp-for="NewInvoiceLineItems.Description" /><br />
+                    </div>
+                    <div class="col-sm-5">
+                        <span asp-validation-for="NewInvoiceLineItems.Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label>Amount:</label>
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" asp-for="NewInvoiceLineItems.Amount" /><br />
+                    </div>
+                    <div class="col-sm-5">
+                        <span asp-validation-for="NewInvoiceLineItems.Amount" class="text-danger"></span><br />
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-primary">Add line item</button>
+                </div>
+            </form>
+        }
+    </div>
+</div>
+
+

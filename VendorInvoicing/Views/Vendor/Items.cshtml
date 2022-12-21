@@ -1,0 +1,88 @@
+﻿@*Items.cshtml
+ Assignment 3
+ Revision History
+       Xiangdong Li, 2022.12.06: Created
+       Xiangdong Li, 2022.12.06: Debugging complete
+       Xiangdong Li, 2020.12.06: Comments added*@
+
+@using Microsoft.AspNetCore.Http
+
+@model List<Vendor>
+
+@{
+    ViewData["Title"] = "All vendors";
+    string cssClassA = "border-dark btn";
+    string cssClassF = "border-dark btn";
+    string cssClassL = "border-dark btn";
+    string cssClassS = "border-dark btn";
+    if (ViewBag.activeColumn == "A")
+    {
+        cssClassA += " btn-primary";
+    }
+    else if (ViewBag.activeColumn == "E")
+    {
+        cssClassF += " btn-primary";
+    }
+    else if (ViewBag.activeColumn == "L")
+    {
+        cssClassL += " btn-primary";
+    }
+    else if (ViewBag.activeColumn == "S")
+    {
+        cssClassS += " btn-primary";
+    }
+}
+
+<a asp-controller="Vendor" asp-action="GetAddVendorRequest">Add new vendor</a>
+
+@section Scripts{
+    <script>
+        $(function () {
+            $("#mydiv").fadeOut(6000);
+        });
+    </script>
+}
+
+@if (TempData.ContainsKey("DeleteMessage"))
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="mydiv">
+        @TempData["DeleteMessage"]!
+        <a asp-controller="Vendor" asp-action="Undo" asp-route-id="@TempData["VendorId"]">Undo</a> this delete!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Adress</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var v in Model)
+        {
+                <tr>
+                    <td>@v.Name</td>
+                    <td>@v.Address1 @v.City @v.ProvinceOrState</td>
+                    <td>
+                        <a asp-controller="Vendor" asp-action="GetLineItemByVendorAndInvoiceId" asp-route-id="@v.VendorId">Invoices</a>
+                        <span class="mx-1">|</span>
+                        <a asp-controller="Vendor" asp-action="GetEditVendorRequestById" asp-route-id="@v.VendorId">Edit</a>
+                        <span class="mx-1">|</span>
+                        <a asp-controller="Vendor" asp-action="GetDeleteRequestById" asp-route-id="@v.VendorId">Delete</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+<div class="btn-group ">
+    <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="A" asp-route-upperBound="E" class="@cssClassA">A - E</a>
+    <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="E" asp-route-upperBound="K" class="@cssClassF">F - K</a>
+    <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="L" asp-route-upperBound="R" class="@cssClassL">L - R</a>
+    <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="S" asp-route-upperBound="Z" class="@cssClassS">S - Z</a>
+</div>
+
+

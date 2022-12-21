@@ -1,0 +1,59 @@
+﻿@*Edit.cshtml
+ Assignment 3
+ Revision History
+       Xiangdong Li, 2022.12.06: Created
+       Xiangdong Li, 2022.12.06: Debugging complete
+       Xiangdong Li, 2020.12.06: Comments added*@
+
+@model Vendor
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+@{
+    ViewData["Title"] = "Edit a vendor";
+}
+
+
+<form asp-controller="Vendor" asp-action="ProcessEditVendorRequest" method="post" asp-route-id="@Model.VendorId" enctype="application/x-www-form-urlencoded">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <partial name="_VendorAddEditLinks" />
+
+    <input type="hidden" asp-for="VendorId" />
+
+    <div>
+        <button type="submit" class="btn btn-primary">Edit</button>
+        @if (@Model.Name[0].ToString() == "B" || @Model.Name[0].ToString() == "A" || @Model.Name[0].ToString() == "B"
+        || @Model.Name[0].ToString() == "C" || Model.Name[0].ToString() == "D"
+        || Model.Name[0].ToString() == "E")
+        {
+            <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="A"
+           asp-route-upperBound="E" class="btn btn-primary">Cancel</a>
+        }
+        @if (@Model.Name[0].ToString() == "F" || @Model.Name[0].ToString() == "G"
+        || @Model.Name[0].ToString() == "H" || Model.Name[0].ToString() == "I"
+        || Model.Name[0].ToString() == "J" || @Model.Name[0].ToString() == "K")
+        {
+            <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="F"
+           asp-route-upperBound="K" class="btn btn-primary">Cancel</a>
+        }
+        @if (@Model.Name[0].ToString() == "L" || @Model.Name[0].ToString() == "M"
+        || @Model.Name[0].ToString() == "N" || Model.Name[0].ToString() == "O"
+        || Model.Name[0].ToString() == "P" || @Model.Name[0].ToString() == "Q"
+        || @Model.Name[0].ToString() == "R")
+        {
+            <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="L"
+           asp-route-upperBound="R" class="btn btn-primary">Cancel</a>
+        }
+        @if (@Model.Name[0].ToString() == "S" || @Model.Name[0].ToString() == "T"
+          || @Model.Name[0].ToString() == "U" || Model.Name[0].ToString() == "V"
+          || Model.Name[0].ToString() == "W" || @Model.Name[0].ToString() == "X"
+          || @Model.Name[0].ToString() == "Y" || @Model.Name[0].ToString() == "Z")
+        {
+            <a asp-controller="Vendor" asp-action="GetVendorsByGroup" asp-route-lowerBound="S"
+           asp-route-upperBound="Z" class="btn btn-primary">Cancel</a>
+        }
+    </div>
+</form>
